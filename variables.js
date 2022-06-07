@@ -104,9 +104,135 @@ console.log(flag,
 //True
 
 //undefined
-
+var x;
+console.log(x);                 //undefined
 
 //null
+x=null;
+console.log(x);                 //null
+
+
+//bigint
+//used to represent the "large" numbers
+// > 2^53 - 1
+//bigint numbers suffix with "n"
+var big_number = 123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789n;
+console.log(big_number);
+
+
+//Symbol
+var secured = Symbol(1000000);
+console.log(secured);
+//Symbol(1000000)
+
+
+/*
+    for(let i=0;i<5;i++){
+
+    }
+    console.log(i);
+    //var : 5      let : ReferenceError: i is not defined
+    //var keyword raised the global polluting issue
+    //let keyword overcomes the global polluting issue
+*/
+
+/*
+    let data = 100;
+    {
+        let data = 200;
+    }
+    console.log(data);
+    //var : 200   let : 100
+*/
+
+/*
+    console.log(data);
+    let data = 100;
+    //var : undefined
+    //let : ReferenceError: Cannot access 'data' before initialization
+    //variable hoisting issue raised because of var keyword
+    //we can overcome variable hoisting with let keyword
+*/
+
+/*
+    let data = 100;
+    let data = 200;
+    console.log(data);
+    //var : 200    let : SyntaxError: Identifier 'data' has already been declared
+    //var keyword allows the duplicate variables
+    //let keyword wont allows the duplicate variables
+*/
+
+/*
+            var                     let
+    var keyword introduced    let keyword introduced in
+    in ES1                    ES6
+
+    global polluting issue    we can overcome global 
+    raised in var keyword     polluting issue by using
+                              let keyword
+
+    variable hoisting issue   we can overcome variable
+    raised in var keyword     hoisting by using let
+
+    duplicate variables       it wont allow duplicate
+    allowed                   variables
+
+    var keyword called        let keyword called as 
+    as global member          block member
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
