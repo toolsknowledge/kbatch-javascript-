@@ -182,6 +182,107 @@ console.log(secured);
     as global member          block member
 */
 
+//const
+//const is the "keyword"
+//const keyword introduced in "ES6"
+//const keyword used to declare the "variables"
+//"reinitlization" not possible with "const" keyword
+//const data = 100;
+//data = 200;
+//TypeError: Assignment to constant variable.
+
+//const str = "Hello";
+//str = "Welcome";
+//TypeError: Assignment to constant variable.
+
+const arr = [10,20,30,40,50];
+//arr = [];
+//TypeError: Assignment to constant variable.
+//arr = [100,200,300,400,500];
+//TypeError: Assignment to constant variable.
+arr[0] = 100;
+arr[4] = 500;
+console.log(arr);  //[ 100, 20, 30, 40, 500 ]
+
+
+const arr1 = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+//arr1 = [];  //TypeError: Assignment to constant variable.
+
+//arr1 = ["Welcome_1","Welcome_2","Welcome_3","Welcome_4","Welcome_5"];
+//TypeError: Assignment to constant variable.
+
+arr1[0] = "Welcome_1";
+arr1[4] = "Welcome_5";
+arr1[5] = "Welcome_6";
+console.log(arr1);
+//["Welcome_1","Hello_2","Hello_3","Hello_4","Welcome_5","Welcome_6"]
+
+
+//JSON
+//Java Script Object Notation
+//JSON also called as JavaScript Objects
+//Syntax
+//Objects --- {}
+//Ararys  --- []
+//Data    --- key & value pairs
+//key & value separated by using ":"
+//key & value pairs separated by using ","
+
+let obj = {
+    "key1" : "Hello_1",
+    "key2" : "Hello_2",
+    "key3" : "Hello_3"
+};
+console.log(
+    obj.key1,
+    obj.key2,
+    obj.key3
+);
+//Hello_1 Hello_2 Hello_3
+
+
+let obj1 = {
+    "sub_one" : "ReactJS",
+    "sub_two" : "NodeJS",
+    "sub_three" : "MongoDB"
+};
+console.log(obj1.sub_one,obj1.sub_two,obj1.sub_three);
+//ReactJS NodeJS MongoDB
+
+
+const obj2 = {
+    "key1" : "Hello_1",
+    "key2" : "Hello_2",
+    "key3" : "Hello_3"
+};
+//obj2 = {};  //TypeError
+
+//obj2 = {"key1":"Welcome_1","key2":"Welcome_2","key3":"Welcome_3"};  //TypeError
+
+obj2.key1 = "Welcome_1";
+obj2.key2 = "Welcome_2";
+obj2.key3 = "Welcome_3";
+console.log(obj2);
+//{ key1: 'Welcome_1', key2: 'Welcome_2', key3: 'Welcome_3' }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
