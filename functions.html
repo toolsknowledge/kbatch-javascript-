@@ -21,5 +21,342 @@
     Function Calling
     ++++++++++++++++
     functionname(arg1,arg2,.....arg n);
-
 -->
+
+<!--
+<script>
+   function func_one(){
+       return "welcome to javascript";
+   }
+   let res = func_one();
+   console.log(res);        //welcome to javascript
+</script>
+-->
+
+<!--
+<script>
+    function func_one(){
+        return "welcome to javascript";
+    }
+
+    let res = func_one;
+    console.log(res);    //def
+</script>
+-->
+<!--
+<script>
+    function func_one(){
+        return func_two();
+    }
+
+    function func_two(){
+        return "Hello";
+    }
+
+    let res = func_one();
+    console.log(res);           //Hello
+</script>
+-->
+
+<!--
+<script>
+    function func_one(){
+        return func_two;
+    }
+    function func_two(){
+        return "Hello";
+    };
+    let res = func_one()();
+    console.log(res);           //Hello
+</script>
+-->
+
+
+<!--
+<script>
+    function func_one(param1,param2,param3){
+        console.log(param1,param2,param3);
+    }
+    func_one("Hello_1","Hello_2","Hello_3");
+    //Hello_1 Hello_2 Hello_3
+
+    func_one();
+    //undefined undefined undefined
+
+    func_one(undefined,"Hello_2");
+    //undefined 'Hello_2' undefined
+
+    func_one(undefined,undefined,"Hello_3");
+    //undefined undefined 'Hello_3'
+
+    func_one(null,null,null);
+    //null null null
+
+    func_one("Hello_1","Hello_2","Hello_3","Hello_4");
+    //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+
+
+<!--
+<script>
+    function func_one(...param1){
+        console.log(param1);
+    }
+    func_one(10,20);         //[10, 20]
+    func_one("Hello_1");     //['Hello_1']
+    func_one();              //[]
+    func_one(undefined,null);//[undefined, null]
+</script>
+-->
+
+<!--
+<script>
+    function func_one(...param1,...param2){
+
+    }
+    //A rest parameter must be last in a parameter list.
+</script>
+-->
+
+<!--
+<script>
+    function func_one(...param1,param2){
+
+    }
+    ////A rest parameter must be last in a parameter list.
+</script>
+-->
+
+<!--
+<script>
+    function func_one(param1,...param2){
+        console.log(param1,param2);
+    }
+    func_one();                     //undefined []
+    func_one("Hello_1");            //Hello_1 []
+    func_one("Hello_1","Hello_2");  //Hello_1 ['Hello_2']
+    func_one(undefined,undefined);  
+                    //undefined [undefined]
+    func_one(null,null);            //null [null]
+</script>
+-->
+
+<!--
+<script>
+    function func_one(param1,param2,...param3){
+        console.log(param1,param2,param3);
+    }
+    func_one();     //undefined undefined []
+    func_one("Hello_1","Hello_2","Hello_3");
+                    //Hello_1 Hello_2 ['Hello_3']
+    func_one(undefined,undefined,undefined);
+                    //undefined undefined [undefined]
+    func_one(null,null,null);
+                    //null null [null]
+    func_one(undefined,"Hello_2");
+                    //undefined 'Hello_2' []
+</script>
+-->
+
+
+<!--
+<script>
+    //Default Parameters in Functions
+    //ES6
+    function func_one(param1="Hello_1",
+                      param2="Hello_2",
+                      param3="Hello_3"){
+        console.log(param1,param2,param3);
+    };
+    func_one();     
+            //Hello_1 Hello_2 Hello_3
+    func_one("Welcome_1","Welcome_2","Welcome_3");
+            //Welcome_1 Welcome_2 Welcome_3
+    func_one(undefined,undefined,undefined);
+            //Hello_1 Hello_2 Hello_3
+    func_one(null,null,null);
+            //null null null
+</script>
+-->
+
+
+<!--
+<script>
+    function func_one(param1,param2="Hello_2",...param3){
+        console.log(param1,param2,param3);
+    }
+    func_one(); 
+            //undefined 'Hello_2' []
+    func_one("Hello_1",undefined,"Hello_3");
+            //Hello_1 Hello_2 ['Hello_3']
+    func_one(undefined,undefined,undefined);
+            //undefined 'Hello_2' [undefined]
+    func_one(null,null,null,null);
+            //null null [null, null]
+</script>
+-->
+
+
+<!--
+    Syntax
+    ******
+    function definition
+    +++++++++++++++++++
+    let var_name = (param1,param2,param3,...param n)=>{
+        business logic
+    }
+
+    function calling
+    ++++++++++++++++
+    var_name(arg1,arg2,arg3,....arg n);
+-->
+
+<!--
+<script>
+    let func_one = ()=>{
+        console.log("welcome to arrow functions");
+    }
+    func_one(); //welcome to arrow functions
+</script>
+-->
+
+<!--
+<script>
+    let func_one = ()=>console.log("Hello");
+    func_one();     //Hello
+</script>
+-->
+
+<!--
+<script>
+    let func_one = ()=>{
+        return "Hello";
+    }
+    let res = func_one();
+    console.log(res);           //Hello
+</script>
+-->
+<!--
+<script>
+    let func_one = ()=>"Hello";
+    let res = func_one();
+    console.log(res);       //Hello
+</script>
+-->
+
+<script>
+    let func_one = (param1,param2,param3)=>{
+        console.log(param1,param2,param3);
+    }
+    func_one();
+        //undefined undefined undefined
+    func_one("Hello_1","Hello_2","Hello_3");
+        //Hello_1 Hello_2 Hello_3
+    func_one(undefined,"Hello_2");
+        //undefined 'Hello_2' undefined
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
